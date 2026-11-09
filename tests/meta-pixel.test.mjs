@@ -90,3 +90,29 @@ test("revocation during SDK load suppresses pending events; new grant works", as
   assert.equal(f.calls.filter(c => c[2] === "PageView").length, 1);
   assert.equal(f.calls.filter(c => c[2] === "Lead").length, 0);
 });
+
+test("Lead utiliza eventID compartilhado com a CAPI", async () => {
+  const f = fixture();
+
+  const eventId = "123e4567-e89b-42d3-a456-426614174000";
+
+  f.pixel.choose("granted");
+  await f.pixel.pageView();
+
+  const result = await f.pixel.lead(eventId);
+
+  assert.equal(result, true);
+
+  const leadEvent = f.calls.find(
+    call => call[2] === "Lead"
+  );
+
+  assert.deepEqual(leadEvent, [
+    "trackSingle",
+    PIXEL_ID,
+    "Lead",
+    {},
+    { eventID: eventId },
+  ]);
+});
+
