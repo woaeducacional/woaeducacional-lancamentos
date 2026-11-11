@@ -179,7 +179,7 @@ test("formulário envia consentimento explícito, trata erro e confirma somente 
   let calls = 0;
   globalThis.fetch = async (input, init) => {
     calls++;
-    assert.equal(input, `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/leads`);
+    assert.equal(input, `${process.env.NEXT_PUBLIC_BASE_PATH ?? "/BlackNovember/superaulas"}/api/leads`);
     assert.equal(JSON.parse(String(init?.body)).campaign_consent, true);
     return Response.json(
       { message: fail ? "Falha" : "Cadastro recebido!" },

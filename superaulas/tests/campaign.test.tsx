@@ -100,7 +100,7 @@ test("links rejeitam esquemas inseguros e números inválidos", () => {
   );
 });
 test("basePath é consistente entre configuração, imagens e PDFs", () => {
-  const prefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "/BlackNovember/superaulas";
   assert.equal(config.basePath, prefix);
   assert.equal(assetPath("/images/ocean.webp"), `${prefix}/images/ocean.webp`);
   assert.equal(
