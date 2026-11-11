@@ -1,14 +1,16 @@
 import { assetPath } from "@/lib/campaign";
+
 export const metadata = { title: "Privacidade | WOA Talk" };
+
 export default function Privacy() {
   return (
     <main className="privacy-page">
-      <a href={assetPath("/")}>← Voltar à campanha</a>
+      <a href={assetPath("/")}>← Voltar às Super Aulas</a>
       <h1>Privacidade e proteção de dados</h1>
       <p>
-        <strong>Versão para revisão — 10/11/2026.</strong> A identificação
-        jurídica do controlador e o e-mail de privacidade precisam ser
-        preenchidos antes da publicação.
+        Esta página trata do cadastro e das comunicações das Super Aulas
+        WOA Exclusive — Black November WOA Talk. Não substitui as políticas
+        dos serviços externos utilizados pelo participante.
       </p>
       <h2>Dados e finalidades</h2>
       <p>
@@ -40,20 +42,31 @@ export default function Privacy() {
       <p>
         Nos termos da LGPD, você pode solicitar confirmação de tratamento,
         acesso, correção, informações sobre compartilhamento, revogação de
-        consentimento e exclusão quando aplicável. Até a definição do canal
-        específico de privacidade, fale com Oliver pelo WhatsApp +55 (61)
-        8117-6884 para encaminhar sua solicitação.
+        consentimento e exclusão quando aplicável. Para solicitar atendimento,
+        escreva para{" "}
+        <a href="mailto:contato@woaeducacional.com.br">
+          contato@woaeducacional.com.br
+        </a>, indicando o e-mail utilizado no cadastro e o que deseja.
       </p>
       <h2>Retenção e segurança</h2>
       <p>
-        O prazo de retenção e o procedimento de exclusão precisam ser definidos
-        pelo responsável antes da publicação. O acesso deve ser limitado às
-        pessoas autorizadas; nenhuma medida elimina todos os riscos.
+        A WOA ainda não definiu um prazo fixo de retenção após esta campanha.
+        Esta política não informa uma data de exclusão automática. Você pode
+        solicitar informações sobre a conservação de seu cadastro ou pedir
+        exclusão pelo e-mail indicado. A conservação deve estar vinculada às
+        finalidades informadas e às hipóteses permitidas pela legislação.
+        O acesso aos registros deve ser limitado às pessoas autorizadas;
+        nenhuma medida elimina todos os riscos.
       </p>
       <h2>Responsável</h2>
       <p>
-        WOA Talk — razão social/nome do controlador, CNPJ quando aplicável e
-        e-mail de privacidade pendentes de confirmação.
+        A WOA Educacional, CNPJ 54.717.782/0001-03, é responsável pelas
+        decisões sobre os dados deste cadastro. Endereço: SQN 409, Bloco J,
+        Sala 305, Asa Norte, Brasília–DF, CEP 70857-100. Contato para
+        privacidade, acesso, correção ou exclusão:{" "}
+        <a href="mailto:contato@woaeducacional.com.br">
+          contato@woaeducacional.com.br
+        </a>.
       </p>
     </main>
   );
